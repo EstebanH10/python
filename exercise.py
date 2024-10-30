@@ -132,15 +132,52 @@ import random
 
 # ORDERING NUMBERS
 
-listNumber = []
-while True:
-    try:
-        n = int(input("how many numbers do you want to order: "))
-        for i in range(0, n):
-            number = int(input("Please enter the number: "))
-            listNumber.append(number)
-        break
-    except ValueError:
-        print("Please enter a integer.")
-listNumber.sort()
-print(listNumber)
+# listNumber = []
+# while True:
+#     try:
+#         n = int(input("how many numbers do you want to order: "))
+#         for i in range(0, n):
+#             number = int(input("Please enter the number: "))
+#             listNumber.append(number)
+#         break
+#     except ValueError:
+#         print("Please enter a integer.")
+# listNumber.sort()
+# print(listNumber)
+
+def hola(nom):
+    print(f"hola {nom}")
+    return
+hola("Lara Croft")
+
+
+def factorial(num):
+    t = num
+    while num > 1:
+        num -= 1
+        t *= num
+    return t
+print(factorial(4))
+
+def iva(total,per=21):
+    facIva = (total*(per/100))+total
+    return facIva
+print(iva(1000))
+
+def areCir(rad):
+    pi = 3.1415
+    return pi*rad**2
+def areCil(rad, hig):
+    return areCir(rad)*hig
+print(areCil(3,5))
+
+def mediaLista(sample):
+    return sum(sample)/len(sample)
+print(mediaLista([10,5,25, 40]))
+
+def exponent(numbers):
+    lastList = []
+    for i in numbers:
+        lastList.append(i**2)
+    return lastList
+print(exponent([2,4,5,6]))
